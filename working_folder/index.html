@@ -1,0 +1,16 @@
+echo "Estimated cost for $person_count people eating $meal_type: $total_price"
+case $meal_type in
+    breakfast)
+        total_price=$((person_count * breakfast_price))
+        ;;
+    lunch)
+        total_price=$((person_count * lunch_price))
+        ;;
+    dinner)
+        total_price=$((person_count * dinner_price))
+        ;;
+    *)
+        echo "Invalid meal type entered."
+        exit 1
+        ;;
+esac
